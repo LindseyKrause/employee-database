@@ -1,22 +1,26 @@
 //Constants/Dependencies
+const inquirer = require('inquirer');
+const view = require('./viewAllDept');
 
-inquirer
-	.prompt([
-		{
-			type: 'input',
-			name: 'name',
-			message: 'What is your name?'
-		},
-		// {
-		// 	type: 'list',
-		// 	message: 'What is your preferred method of communication?',
-		// 	name: 'contact',
-		// 	choices: ['email', 'phone', 'Slack', 'smoke signal']
-		// },
-		// {
-		// 	type: 'checkbox',
-		// 	message: 'What languages do you know?',
-		// 	name: 'stack',
-		// 	choices: ['HTML', 'CSS', 'JavaScript', 'SQL']
-		// }
-	])
+//Inquirer Prompt & Questions---------------------------------
+function runInquirer() {inquirer
+    .prompt([
+        {
+            type: 'list',
+            name: 'chooseAction',
+            message: 'What would you like to do?',
+            choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add a Role', 'Add an Employee', 'Update Employee'],
+            default: 'View All Departments',
+        },
+        {
+            type: 'confirm',
+            name: 'didYou',
+            message: 'Did you do it?',
+            when: (answers) => answers.chooseAction === 'View All Roles'
+        }
+    ])
+    .then(function (data) {
+        console.log('banana');
+    })};
+
+    module.exports = runInquirer();
