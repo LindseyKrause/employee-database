@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const PORT =process.env.PORT||3001;
 const mysql = require('mysql2');
-var banana = require('./index');
+const runInquirer = require('./index');
 
 // Middleware ------------------------------------
 app.use(express.urlencoded({ extended: true }));
@@ -26,3 +26,7 @@ app.listen(PORT, () => {
 }); 
 
 runInquirer();
+// module.exports = {
+//     example: example,
+
+// }

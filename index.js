@@ -23,4 +23,4 @@ function runInquirer() {inquirer
         console.log('banana');
     })};
 
-    module.exports = runInquirer();
+    module.exports = runInquirer;
