@@ -20,7 +20,8 @@ function runInquirer() {inquirer
         }
     ])
     .then(function (data) {
-        console.log('banana');
+        console.log(data);
+        view(data);
     })};
 
     module.exports = runInquirer;
