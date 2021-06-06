@@ -3,10 +3,8 @@ const mysql = require('mysql2');
 const runInquirer = require('./index');
 require('dotenv').config();
 const PASSWORD = process.env.PASSWORD;
+const cTable = require("console.table");
 
-
-//Add Env 
-console.log(process.env.moose);
 
 // Connect to Database----------------------------
 const db = mysql.createConnection(
@@ -19,10 +17,8 @@ const db = mysql.createConnection(
 	console.log(`Connected to the employee_db database.`)
 );
 
-db.connect(err => {if (err) throw err;})
+db.connect(err => {if (err) throw err});
 
 runInquirer();
-// module.exports = {
-//     example: example,
 
-// }
+module.exports = db;

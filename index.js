@@ -20,8 +20,8 @@ function runInquirer() {inquirer
         }
     ])
     .then(function (data) {
-        console.log(data);
-        // view(data);
+        console.log('end of inquirer page view departments function is below');
+        view(data);
     })};
 
     module.exports = runInquirer;

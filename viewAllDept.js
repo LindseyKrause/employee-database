@@ -1,14 +1,15 @@
 let data = require('./index');
+const db = require('./server');
 
 viewAllDept = function (data) {
-    console.log('view all department')
+    // console.log(data);
     if(data.chooseAction === 'View All Departments') {
         console.log('View All Departments function starting');
-        db.query(`SELECT * FROM departments`, (err, result) => {
+        db.query(`SELECT * FROM department`, (err, result) => {
             if (err) {
                 console.log(err);
             }
-            console.log(result);
+            console.log("hello");
             });
         };
         
