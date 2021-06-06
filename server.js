@@ -1,21 +1,14 @@
 // Constants/Dependencies ------------------------
-const express = require('express');
-const app = express();
 const mysql = require('mysql2');
 const runInquirer = require('./index');
 require('dotenv').config();
-const PASSWORD = require('./.env')
+const PASSWORD = process.env.PASSWORD;
 
 
 //Add Env 
-
 console.log(process.env.moose);
 
-// Middleware ------------------------------------
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-const PORT = process.env.PORT || 3001;
-//Connect to Database----------------------------
+// Connect to Database----------------------------
 const db = mysql.createConnection(
 	{
 		host: 'localhost',
@@ -26,10 +19,7 @@ const db = mysql.createConnection(
 	console.log(`Connected to the employee_db database.`)
 );
 
-// Express Call ------------------------------------
-app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
-}); 
+db.connect(err => {if (err) throw err;})
 
 runInquirer();
 // module.exports = {

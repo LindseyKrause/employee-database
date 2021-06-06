@@ -21,7 +21,7 @@ function runInquirer() {inquirer
     ])
     .then(function (data) {
         console.log(data);
-        view(data);
+        // view(data);
     })};
 
     module.exports = runInquirer;
