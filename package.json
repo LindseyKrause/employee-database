@@ -4,6 +4,7 @@
   "description": "This is a CLA content management system that is meant to manage an employee database using Node.js, Inquirer, and MySQL.",
   "main": "server.js",
   "dependencies": {
+    "chalk": "^4.1.1",
     "console.table": "^0.10.0",
     "dot": "^1.1.3",
     "dotenv": "^10.0.0",

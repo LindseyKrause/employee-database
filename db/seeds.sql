@@ -7,7 +7,7 @@ VALUES
     ('Lannister'),
     ('Stark');
 
-INSERT INTO role
+INSERT INTO roles
     (title, salary, department_id)
 VALUES
     ('Targaryen Queen', 750000, 1),
