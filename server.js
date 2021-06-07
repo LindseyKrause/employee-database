@@ -114,7 +114,7 @@ function addDepartment() {
                 if (err) {
                     console.log(err);
                 }
-                log(chalk.greenBright("You have added `${deptName}` to your departments"));
+                log(chalk.greenBright("Success! Department Added!"));
                 log(chalk.magentaBright("Press Down Arrow to go back to main menu"));
 
             });
@@ -123,8 +123,52 @@ function addDepartment() {
 };
 //-------Add Roles
 function addRole() {
-    console.log("add role started");
+    console.log; ("add role started");
+    // let allDepts = [];
+    // const getAllDepts = db.query("SELECT * FROM department", (err, results) => {
+    //     if (err) {
+    //         console.log(err);
+    //     }
+    //     for (let i = 0; i < results.length; i++) {
+    //         allDepts.push({ name: results[i].department_name, value: results[i].id });;
+    //     }
+    // });
+
+    // inquirer
+    //     .prompt([
+    //         {
+    //             type: 'input',
+    //             name: 'inputTitle',
+    //             message: 'What is the title of the new role called?',
+    //         },
+    //         {
+    //             type: 'integer',
+    //             name: 'inputSalary',
+    //             message: 'What is the salary of the new role?',
+    //         },
+    //         {
+    //             type: 'list',
+    //             name: 'inputDepartment',
+    //             message: 'What is the department that this role belongs to?',
+    //             choices: allDepts,
+    //         },
+    //     ])
+    //     .then((answers) => {
+    //         const rTitle = answers.inputTitle;
+    //         const rSalary = parseInt(answers.inputSalary);
+    //         const deptInput = parseInt(answers.inputDepartment);
+    //         const query = `INSERT INTO roles (title, salary, department_id) VALUES (${rTitle}, ${rSalary}, ${deptInput})`;
+
+    //         db.query(query, (err, results) => {
+    //             if (err) throw err;
+    //             log(chalk.greenBright("Success! Role Added!"));
+    //             log(chalk.magentaBright("Press Down Arrow to go back to main menu"));
+
+    //         });
+    //         runInquirer();
+    //     });
 };
+
 //-------Add Employee
 function addEmployee() {
     console.log("add employee started");
