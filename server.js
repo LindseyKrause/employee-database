@@ -24,6 +24,10 @@ runInquirer();
 
 //Inquirer Prompt & Questions---------------------------------
 function runInquirer() {
+    log(chalk.bgMagentaBright(`
+    ***********************************************************
+    --------------------Employee Tracker!----------------------
+    ***********************************************************`));
     inquirer
         .prompt([
             {
@@ -219,7 +223,6 @@ function viewEmployees() {
 function updateEmployee() {
     console.log("update employee started");
 };
-
 
 // Delete Functions (Crud: Delete)-----------------------
 
