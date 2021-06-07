@@ -1,7 +1,8 @@
 # Employee Database
 This is a CLI content management system that is meant to manage an employee database using Node.js, Inquirer, and MySQL.
 
-Screen Shot 2021-06-06 at 11.48.56 PM.png
+![Screen Shot 2021-06-06 at 11 48 56 PM](https://user-images.githubusercontent.com/79954805/120973567-f39f0580-c723-11eb-94e7-d877e9f414dc.png)
+
 ## Purpose
 This project creates a mysql database that contains three tables (Department, Roles, Employee).  These tables contain various kinds of information including employee name; auto-generated id feilds for employees, roles, and departments; salary information; and manager information.  By utilizing a CLI the user can access data about employees, departments, and roles. 
 
